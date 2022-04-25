@@ -29,101 +29,101 @@ const AddExercise = () => {
    
     return (
         <div className="form-container">
-        <div className="columns">
-            <div className="header-add">
-                <h2>Add Exercise</h2>
-            </div>
-            <div className="column">
-                <form onSubmit={saveExercise}>
-                    <div className="field">
-                        <label className="label">Name*: </label>
-                        <div className="control">
-                            <input 
-                                required
-                                className="input"
-                                maxLength="10"
-                                type="text"
-                                placeholder="exercise Name"
-                                value={activityname}
-                                onChange={(e) => setActivityName(e.target.value)}
-                            />
+            <div className="columns">
+                <div className="header-add">
+                    <h2>Add Exercise</h2>
+                </div>
+                <div className="column">
+                    <form onSubmit={saveExercise}>
+                        <div className="field">
+                            <label className="label">Name*: </label>
+                            <div className="control">
+                                <input 
+                                    required
+                                    className="input"
+                                    maxLength="10"
+                                    type="text"
+                                    placeholder="exercise Name"
+                                    value={activityname}
+                                    onChange={(e) => setActivityName(e.target.value)}
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Type*: </label>
-                        <div className="control">
-                            <select 
-                                required
-                                className="input"
-                                type="text"
-                                value={activitytype}
-                                onChange={(e) => setActivityType(e.target.value)}
-                            >
-                                <option value="">Select...</option>
-                                <option value="Running">Running</option>
-                                <option value="Bike">Bicycle ride</option>
-                                <option value="Swimming">Swimming</option>
-                                <option value="Walking">Walking</option>
-                                <option value="Hiking">Hiking</option>
-                                <option value="football">Football</option>
-                                <option value="badminton">Badminton</option>
-                                <option value="boxing">Boxing</option>
-                                <option value="dancing">Dancing</option>
-                                <option value="indoor">Indoor</option>
-                                <option value="outdoor">Outdoor gym</option>
-                            </select>
+                        <div className="field">
+                            <label className="label">Type*: </label>
+                            <div className="control">
+                                <select 
+                                    required
+                                    className="input"
+                                    type="text"
+                                    value={activitytype}
+                                    onChange={(e) => setActivityType(e.target.value)}
+                                >
+                                    <option value="">Select...</option>
+                                    <option value="Running">Running</option>
+                                    <option value="Bike">Bicycle ride</option>
+                                    <option value="Swimming">Swimming</option>
+                                    <option value="Walking">Walking</option>
+                                    <option value="Hiking">Hiking</option>
+                                    <option value="football">Football</option>
+                                    <option value="badminton">Badminton</option>
+                                    <option value="boxing">Boxing</option>
+                                    <option value="dancing">Dancing</option>
+                                    <option value="indoor">Indoor</option>
+                                    <option value="outdoor">Outdoor</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Description: </label>
-                        <div className="control">
-                            <textarea 
-                                maxLength="30"
-                                type="text" 
-                                placeholder="Description" 
-                                style={{height: '100px'}}
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                            >   
-                            </textarea>
+                        <div className="field">
+                            <label className="label">Description: </label>
+                            <div className="control">
+                                <textarea 
+                                    maxLength="30"
+                                    type="text" 
+                                    placeholder="Description" 
+                                    style={{height: '100px'}}
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                >   
+                                </textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Duration*: </label>
-                        <div className="control">
-                            <input
-                                required
-                                type="time"
-                                value={duration}
-                                onChange={(e) => setDuration(e.target.value)}
-                            />
+                        <div className="field">
+                            <label className="label">Duration*: </label>
+                            <div className="control">
+                                <input
+                                    required
+                                    type="time"
+                                    value={duration}
+                                    onChange={(e) => setDuration(e.target.value)}
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Date*: </label>
-                        <div className="control">
-                            <input 
-                                required 
-                                type="Date"
-                                value={date}
-                                onChange={(e) => setDate(e.target.value)}
-                            />       
+                        <div className="field">
+                            <label className="label">Date*: </label>
+                            <div className="control">
+                                <input 
+                                    required 
+                                    type="Date"
+                                    value={date}
+                                    onChange={(e) => setDate(e.target.value)}
+                                />       
+                            </div>
                         </div>
-                    </div>
-                    <div className="field">
-                        <div className="control">
-                            <button 
-                                className='button' 
-                                value="submit" 
-                                type="submit"
-                            >
-                                Save
-                            </button>
+                        <div className="field">
+                            <div className="control">
+                                <button 
+                                    className='button' 
+                                    value="submit" 
+                                    type="submit"
+                                >
+                                    Save
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>  
+                    </form>
+                </div>
+            </div>  
         </div> 
     ) 
 }
