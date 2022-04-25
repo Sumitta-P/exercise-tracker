@@ -4,7 +4,7 @@ import cors from "cors";
 import ExerciseRoute from "./routes/ExerciseRoute.js";
 
 const app = express();
-mongoose.connect('mongodb://localhost:27017/mern_db',{
+mongoose.connect('mongodb+srv://mern_db:1997MtBy@tenrun.0i4ca.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
