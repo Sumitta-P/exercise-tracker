@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import ExerciseRoute from "./routes/ExerciseRoute.js";
-let path = require("path");
+import path from "path";
 
 const app = express();
 mongoose.connect('mongodb+srv://mern_db:1997MtBy@tenrun.0i4ca.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
