@@ -17,7 +17,7 @@ const EditExercise = () => {
     }, []);
 
     const getExerciseById = async() => {
-        const response = await axios.get(`http://localhost:4000/exercises/${id}`);
+        const response = await axios.get(`https://tenrun.herokuapp.com/exercises/${id}`);
         setActivityName(response.data.activityname);
         setActivityType(response.data.activitytype);
         setDescription(response.data.description);
@@ -28,7 +28,7 @@ const EditExercise = () => {
     const updateExercise = async(e) => {
         e.preventDefault();
         try{
-            await axios.patch(`http://localhost:4000/exercises/${id}`, {
+            await axios.patch(`https://tenrun.herokuapp.com/exercises/${id}`, {
                 activityname,
                 activitytype,
                 description,

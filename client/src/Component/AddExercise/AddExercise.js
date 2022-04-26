@@ -14,7 +14,7 @@ const AddExercise = () => {
     const saveExercise = async(e) => {
         e.preventDefault();
         try{
-            await axios.post('http://localhost:4000/exercises', {
+            await axios.post('https://tenrun.herokuapp.com/exercises', {
                 activityname,
                 activitytype,
                 description,
