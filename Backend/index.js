@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import ExerciseRoute from "./routes/ExerciseRoute.js";
+let path = require("path");
 
 const app = express();
 mongoose.connect('mongodb+srv://mern_db:1997MtBy@tenrun.0i4ca.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
@@ -16,4 +17,12 @@ app.use(cors());
 app.use(express.json());
 app.use(ExerciseRoute);
 
-app.listen(4000, () => console.log('Server up and running...'));
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../build')))
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../build/index.html"))
+  })
+}
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log('Server up and running...'));
