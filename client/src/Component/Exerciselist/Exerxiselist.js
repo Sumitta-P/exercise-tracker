@@ -11,13 +11,13 @@ const ExerciseList = () => {
     }, []);
 
     const getExercises = async() => {
-      const response = await axios.get('http://localhost:4000/exercises');
+      const response = await axios.get('https://tenrun.herokuapp.com/exercises');
       setExercises(response.data);
     }
 
     const deleteExercise = async (id) => {
       try{
-        await axios.delete(`http://localhost:4000/exercises/${id}`);
+        await axios.delete(`https://tenrun.herokuapp.com/exercises/${id}`);
         getExercises();
       } catch (error) {
         console.log(error);
